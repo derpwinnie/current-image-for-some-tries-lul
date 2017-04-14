@@ -33,7 +33,12 @@ function countPoints(data) {
 // autoupdate
 function updateUtils() {
 	console.log('UPDATING')
-	document.getElementById("botUtils").remove();var s=document.createElement('script');s.src='https://unpkg.com/pxls.space@latest/pxlsbot.utils.min.js',s.id='botUtils',s.type='text/javascript';document.head.appendChild(s);
+	fetch('https://crossorigin.me/https://registry.npmjs.org/pxls.space/')
+		.then(function(r) { return r.json()})
+		.then(function(r) { return r['dist-tags'].latest })
+		.then(function(version) {
+			document.getElementById("botUtils").remove();var s=document.createElement('script');s.src='https://unpkg.com/pxls.space@' + version + '/pxlsbot.utils.min.js',s.id='botUtils',s.type='text/javascript';document.head.appendChild(s);
+		})
 }
 setTimeout(updateUtils, 1000 * 60)
 //
