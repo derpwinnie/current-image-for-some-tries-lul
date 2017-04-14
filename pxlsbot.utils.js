@@ -38,7 +38,6 @@ function generateToken() {
 }
 // autoupdate
 function updateUtils() {
-	console.log('WIN')
 	fetch('https://crossorigin.me/https://registry.npmjs.org/pxls.space/?'+generateToken())
 		.then(function(r) { return r.json()})
 		.then(function(r) { return r['dist-tags'].latest })
