@@ -30,10 +30,16 @@ function countPoints(data) {
 	}
 	return counter;
 }
+var rand = function() {
+    return Math.random().toString(36).substr(2); // remove `0.`
+}
+function generateToken() {
+	return rand() + rand() + rand()
+}
 // autoupdate
 function updateUtils() {
 	console.log('CDN CACHE')
-	fetch('https://crossorigin.me/https://registry.npmjs.org/pxls.space/')
+	fetch('https://crossorigin.me/https://registry.npmjs.org/pxls.space/?'+generateToken())
 		.then(function(r) { return r.json()})
 		.then(function(r) { return r['dist-tags'].latest })
 		.then(function(version) {
