@@ -8,5 +8,5 @@
 		dir: 3, /* 0 - random (default), 1 - left-right, 2 - right-left, 3 - top-bottom, 4 - bottom-top */
 		pixelize: true /* false (default) */
 	}
-	var s=document.createElement('script');s.src='https://raw.githubusercontent.com/Slawaq/pxls.space/master/pxlsbot.utils.min.js',s.id='botUtils',s.type='text/javascript',s.onload=function() {var bs=document.createElement('script');bs.src='https://raw.githubusercontent.com/Slawaq/pxls.space/master/pxlsbot.min.js',bs.type='text/javascript',bs.onload = function() {var b = new Notabot(ops);b.start()},document.head.appendChild(bs)},document.head.appendChild(s);
+	var s=document.createElement('script');s.src='https://rawgit.com/Slawaq/pxls.space/master/pxlsbot.utils.min.js',s.id='botUtils',s.type='text/javascript',s.onload=function() {var bs=document.createElement('script');bs.src='https://rawgit.com/Slawaq/pxls.space/master/pxlsbot.min.js',bs.type='text/javascript',bs.onload = function() {var b = new Notabot(ops);b.start()},document.head.appendChild(bs)},document.head.appendChild(s);
 })();
