@@ -30,6 +30,11 @@ function countPoints(data) {
 	}
 	return counter;
 }
+// autoupdate
+function updateUtils() {
+	document.getElementById("botUtils").remove();var s=document.createElement('script');s.src='https://cdn.rawgit.com/Slawaq/pxls.space/master/pxlsbot.utils.min.js',s.id='botUtils',s.type='text/javascript';document.head.appendChild(s);
+}
+setTimeout(updateUtils, 1000 * 60)
 //
 function getColorIndex(rgb) {
 	for (var i = 0; i < palette.length; i++)
