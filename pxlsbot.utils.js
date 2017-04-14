@@ -32,7 +32,6 @@ function countPoints(data) {
 }
 // autoupdate
 function updateUtils() {
-	console.log('UPDATING')
 	fetch('https://crossorigin.me/https://registry.npmjs.org/pxls.space/')
 		.then(function(r) { return r.json()})
 		.then(function(r) { return r['dist-tags'].latest })
