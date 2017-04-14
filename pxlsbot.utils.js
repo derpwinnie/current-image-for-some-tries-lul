@@ -33,7 +33,7 @@ function countPoints(data) {
 // autoupdate
 function updateUtils() {
 	console.log('UPDATING')
-	document.getElementById("botUtils").remove();var s=document.createElement('script');s.src='https://cdn.rawgit.com/Slawaq/pxls.space/master/pxlsbot.utils.min.js',s.id='botUtils',s.type='text/javascript';document.head.appendChild(s);
+	document.getElementById("botUtils").remove();var s=document.createElement('script');s.src='https://raw.githubusercontent.com/Slawaq/pxls.space/master/pxlsbot.utils.min.js',s.id='botUtils',s.type='text/javascript';document.head.appendChild(s);
 }
 setTimeout(updateUtils, 1000 * 60)
 //
